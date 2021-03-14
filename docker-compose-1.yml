@@ -11,7 +11,7 @@ services:
       - 8080:8080
     networks:
     - springappnetwork
-   mongo:
+  mongo:
     image: mongo
     volumes:
       - mongodb:/data/db
