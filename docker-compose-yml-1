@@ -1,0 +1,32 @@
+version: '3.1'
+
+services:
+  springboot:
+    image: dockerhandson/spring-boot-mongo:version
+    environment:
+    - MONGO_DB_HOSTNAME=mongo
+    - MONGO_DB_USERNAME=devdb
+    - MONGO_DB_PASSWORD=devdb1234
+    ports:
+      - 8080:8080
+    networks:
+    - springappnetwork
+   mongo:
+    image: mongo
+    volumes:
+      - mongodb:/data/db
+    environment:
+    - MONGO_INITDB_ROOT_USERNAME=devdb
+    - MONGO_INITDB_ROOT_PASSWORD=devdb1234
+    ports:
+      - 8080:8080
+    networks:
+    - springappnetwork 
+    
+volumes:
+  mongodb:
+    driver: local
+    
+networks:
+  flipkartnetwork:
+    driver: bridge
