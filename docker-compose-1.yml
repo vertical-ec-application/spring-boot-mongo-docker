@@ -8,7 +8,7 @@ services:
     - MONGO_DB_USERNAME=devdb
     - MONGO_DB_PASSWORD=devdb1234
     ports:
-      - 8080:8080
+      - 8081:8080
     networks:
     - springappnetwork
   mongo:
