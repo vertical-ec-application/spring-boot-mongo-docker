@@ -18,8 +18,6 @@ services:
     environment:
     - MONGO_INITDB_ROOT_USERNAME=devdb
     - MONGO_INITDB_ROOT_PASSWORD=devdb1234
-    ports:
-      - 8080:8080
     networks:
     - springappnetwork 
     
