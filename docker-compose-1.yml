@@ -28,5 +28,5 @@ volumes:
     driver: local
     
 networks:
-  flipkartnetwork:
+  springappnetwork:
     driver: bridge
