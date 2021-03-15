@@ -1,0 +1,11 @@
+version: '3.1'
+
+services:
+  springboot:
+    environment:
+    - MONGO_DB_USERNAME=qadb
+    - MONGO_DB_PASSWORD=qadbb1234
+  mongo:
+    environment:
+    - MONGO_INITDB_ROOT_USERNAME=qadb
+    - MONGO_INITDB_ROOT_PASSWORD=qadb1234
